@@ -1,0 +1,161 @@
+/* The side navigation menu */
+.sidebar {
+    width: 150px;
+    background-color: #f1f1f1;
+    position: absolute;
+    height: 1100px;
+    overflow: hidden;
+}
+
+/* Sidebar links */
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 20px;
+    text-decoration: none;
+}
+
+/* Active/current link*/
+.sidebar a.active {
+    background-color: #33cc33;
+    color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+
+    padding-top: 50px;
+    margin-left: 200px;
+    margin-bottom: 100px;
+    height: 1100px;
+}
+
+/*On screens that are less than 700px wide, make the sidebar into a topbar*/
+@media screen and (max-width: 780px) {
+    .sidebar {
+        margin: 0;
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .sidebar a {
+        float: left;
+    }
+
+    div.content {
+        margin-bottom: 100px;
+        margin-left: 0px;
+    }
+}
+
+/* On screens that are less than 420px, display the bar vertically, instead of horizontally*/
+@media screen and (max-width: 420px) {
+    .sidebar a {
+        margin: 0;
+        text-align: center;
+        float: none;
+
+    }
+
+    .row.content {
+        margin-left: 0px;
+        height: 100%;
+    }
+
+    div.content {
+        margin-left: 0px;
+        margin-bottom: 100px;
+        margin-top: 200px;
+        overflow: auto;
+    }
+}
+
+.footer {
+
+    min-height: 100px;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #33cc33;
+    color: black;
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 0px;
+    padding: 60px;
+    text-align: center;
+    background: #33cc33;
+    color: white;
+    font-size: 30px;
+}
+
+/*css for header*/
+.jumbotron {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 0px;
+    color: inherit;
+    background-color: #eee;
+}
+
+/*Centered text*/
+.centered {
+    color: whitesmoke;
+    font-size: 20px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 200px;
+    font-family: inherit;
+    padding-right: 10px;
+
+}
+
+/*container for image*/
+img {
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 25%;
+    height: 25%;
+    margin-left: 40%;
+    border: none;
+}
+
+/*Embed the image as a background*/
+.image {
+    background-image: url("../images/matrix.gif");
+    max-width: 100%; /* for IE 6 */
+    max-height: 100%;
+    background-size: auto 100%;
+}
+
+.textColor {
+    color: whitesmoke;
+    font-family: inherit;
+    border-color: red;
+}
+
+.buttonColor {
+    color: #33cc33;
+}
+
+.container-fluid {
+    position: relative;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: -100px;
+}
+
